@@ -73,6 +73,12 @@ void loadAssets(){
     'maps/Rooms1.jpg',
     'maps/Rooms2.jpg',
     'maps/startRooms.png',
+    'maps/baoxianflag.png',
+    'maps/zhufuflag.png',
+    'maps/didaflag.png',
+    'maps/bichuflag.png',
+    'maps/huatiflag.png',
+    'maps/press.png',
     'menu/button.png',
     'persons/person1.png',
     'persons/person2.png',
@@ -85,7 +91,14 @@ void loadAssets(){
     'cards/events01.jpg',
     'cards/events02.jpg',
     'cards/omen01.jpg',
-    'cards/omen02.jpg'
+    'cards/omen02.jpg',
+    'dice/dice_0.png',
+    'dice/dice_1.png',
+    'dice/dice_2.png',
+    'dice/dice_action_1.png',
+    'dice/dice_action_2.png',
+    'dice/dice_action_3.png',
+    'dice/diceaction.png'
   ]);
 }
 
