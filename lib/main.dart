@@ -87,8 +87,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   maxHeight: 1080,
                 ),
                 child: GameWidget(
-                  game: game,
-                ));
+                    game: game,
+                    // 主窗口上 增加多层级 布局, 用于显示游戏中的UI
+                    // 例如: 1、选择菜单,
+                    // 2、暂停画面,
+                    // 3、游戏结束层
+                    // 等等
+                    overlayBuilderMap: {
+                      'gamePauseOverLay':
+                          (BuildContext context, BlackHouseGame game) {
+                        return const Text('gamePauseOverlay');
+                      },
+                      'mainMenuOverlay':
+                          (BuildContext context, BlackHouseGame game) {
+                        return const Text('mainMenuOverlay');
+                      },
+                      'gameOverlay':
+                          (BuildContext context, BlackHouseGame game) {
+                        return const Text('gameOverlay');
+                      },
+                    }));
           },
         ),
       ),
