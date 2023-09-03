@@ -15,12 +15,7 @@ class World extends ParallaxComponent<BlackHouseGame> {
   Future<void> onLoad() async {
     parallax = await gameRef.loadParallax(
       [
-        ParallaxImageData('game/background/06_Background_Solid.png'),
-        ParallaxImageData('game/background/05_Background_Small_Stars.png'),
-        ParallaxImageData('game/background/04_Background_Big_Stars.png'),
-        ParallaxImageData('game/background/02_Background_Orbs.png'),
-        ParallaxImageData('game/background/03_Background_Block_Shapes.png'),
-        ParallaxImageData('game/background/01_Background_Squiggles.png'),
+        ParallaxImageData('images/persons/person_1.png'),
       ],
       fill: LayerFill.width,
       repeat: ImageRepeat.repeat,
