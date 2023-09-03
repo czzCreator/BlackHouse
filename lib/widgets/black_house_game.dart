@@ -6,13 +6,15 @@ import 'package:flame/game.dart';
 import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 
+import './world.dart';
+
 enum Character { dash, sparky }
 
 class BlackHouseGame extends FlameGame
     with HasKeyboardHandlerComponents, HasCollisionDetection {
   BlackHouseGame({super.children});
 
-  // final World _world = World();
+  final World _world = World();
   // LevelManager levelManager = LevelManager();
   // GameManager gameManager = GameManager();
   // int screenBufferSpace = 300;
@@ -22,7 +24,7 @@ class BlackHouseGame extends FlameGame
 
   @override
   Future<void> onLoad() async {
-    // await add(_world);
+    await add(_world);
 
     // await add(gameManager);
 
