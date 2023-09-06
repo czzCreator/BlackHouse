@@ -31,6 +31,8 @@ dependencies:
 # The following adds flame engine(version) to your application.
   flame: 1.8.2
 
+  window_manager: ^0.3.6
+
   flutter:
     sdk: flutter
 
@@ -64,6 +66,7 @@ flutter:
   assets:
      - assets/images/persons/
      - assets/images/bg.jpg
+     - assets/images/game_over_overlay.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

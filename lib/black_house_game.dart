@@ -10,6 +10,16 @@ import './world.dart';
 
 enum Character { dash, sparky }
 
+/*
+1. 继承自FlameGame,这是Flame引擎提供的游戏主类基类。
+2. 混入(with)了一些Flame提供的辅助类,如键盘输入处理、碰撞检测等。
+3. 定义了一些重要的游戏组件,如World(游戏世界)、游戏状态管理器、物体管理器等。
+4. implements了一些FlameGame要实现的方法,如onLoad负责加载资源,update负责每帧更新逻辑。
+5. 定义了一些游戏流程控制的方法,如初始化游戏,开始游戏,重置游戏等。
+6. 处理游戏状态切换逻辑,如菜单切换,游戏开始/结束等。
+
+这个类作为游戏的入口,管理游戏的主要逻辑流程,负责加载资源、组装场景,并控制游戏状态运行的整个生命周期
+*/
 class BlackHouseGame extends FlameGame
     with HasKeyboardHandlerComponents, HasCollisionDetection {
   BlackHouseGame({super.children});
@@ -28,7 +38,7 @@ class BlackHouseGame extends FlameGame
 
     // await add(gameManager);
 
-    overlays.add('gameOverlay');
+    overlays.add('gameOverOverlay');
 
     // await add(levelManager);
   }
