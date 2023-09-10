@@ -157,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
                       },
                       'mainMenuOverlay':
                           (BuildContext context, BlackHouseGame game) {
-                        return const Text('mainMenuOverlay');
+                        return MainMenuOverlay(game);
                       },
                       'gameOverOverlay':
                           (BuildContext context, BlackHouseGame game) {
