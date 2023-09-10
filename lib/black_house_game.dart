@@ -8,7 +8,15 @@ import 'package:flutter/material.dart';
 
 import './world.dart';
 
-enum Character { dash, sparky }
+//桌游默认有6个可供选择的角色
+//1. 父亲(Father Rhinehardt) - 一个坚定的男性牧师。
+//2. 母亲(Mother) - 一位慈爱的主妇。
+//3. 兄长(Big Brother) - 勇敢的哥哥。
+//4. 妹妹(Little Girl) - 渴望探险的小女孩。
+//5. 运动员(Athlete) - 一个头脑简单的运动健将。
+//6. 书呆(Professor) - 一位聪明的老学者。
+
+enum Character { father, mother, bigBrother, littleGirl, athlete, professor }
 
 /*
 1. 继承自FlameGame,这是Flame引擎提供的游戏主类基类。
@@ -38,7 +46,8 @@ class BlackHouseGame extends FlameGame
 
     // await add(gameManager);
 
-    overlays.add('gameOverOverlay');
+    overlays.add('mainMenuOverlay');
+    //overlays.add('gameOverOverlay');
 
     // await add(levelManager);
   }
@@ -66,7 +75,7 @@ class BlackHouseGame extends FlameGame
 
   @override
   Color backgroundColor() {
-    return Color.fromARGB(255, 39, 40, 41);
+    return const Color.fromARGB(255, 39, 40, 41);
   }
 
   void initializeGameStart() {
