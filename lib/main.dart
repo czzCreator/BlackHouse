@@ -146,18 +146,23 @@ class _MyHomePageState extends State<MyHomePage> with WindowListener {
                 child: GameWidget(
                     game: game,
                     // 主窗口上 增加多层级 布局, 用于显示游戏中的UI
-                    // 例如: 1、选择菜单,
+                    // 例如: 1、main menu 选择菜单,
+                    // 2、角色选择界面
                     // 2、暂停画面,
                     // 3、游戏结束层
                     // 等等
                     overlayBuilderMap: {
-                      'gamePauseOverLay':
-                          (BuildContext context, BlackHouseGame game) {
-                        return const Text('gamePauseOverlay');
-                      },
                       'mainMenuOverlay':
                           (BuildContext context, BlackHouseGame game) {
                         return MainMenuOverlay(game);
+                      },
+                      'characterSelectOverlay':
+                          (BuildContext context, BlackHouseGame game) {
+                        return CharacterSelectOverlay(game);
+                      },
+                      'gamePauseOverLay':
+                          (BuildContext context, BlackHouseGame game) {
+                        return const Text('gamePauseOverlay');
                       },
                       'gameOverOverlay':
                           (BuildContext context, BlackHouseGame game) {

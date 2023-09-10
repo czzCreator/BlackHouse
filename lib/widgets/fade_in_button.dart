@@ -8,7 +8,10 @@ class FadeInButton extends StatefulWidget {
   final String text;
 
   const FadeInButton(
-      {super.key, required this.text, required this.onHoverChanged});
+      {super.key,
+      required this.text,
+      required this.onHoverChanged,
+      required this.onPressed});
 
   @override
   State<FadeInButton> createState() => _FadeInButtonState();
@@ -17,6 +20,9 @@ class FadeInButton extends StatefulWidget {
 
   //这种回调比较特别：ValueChanged是Flutter定义的回调函数类型,用于传递一个新的值给回调接收者
   final ValueChanged<bool> onHoverChanged;
+
+  // 添加onPressed回调
+  final VoidCallback onPressed;
 }
 
 class _FadeInButtonState extends State<FadeInButton>
@@ -104,7 +110,7 @@ class _FadeInButtonState extends State<FadeInButton>
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: widget.onPressed,
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(
                         width: (_isHovered ? 2.0 : 0.0),
