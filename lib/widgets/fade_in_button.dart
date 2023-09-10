@@ -106,8 +106,11 @@ class _FadeInButtonState extends State<FadeInButton>
                   child: OutlinedButton(
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
-                      side: const BorderSide(
-                          width: 0.0, color: Colors.transparent), // 边框颜色
+                      side: BorderSide(
+                        width: (_isHovered ? 2.0 : 0.0),
+                        color:
+                            (_isHovered ? Colors.white70 : Colors.transparent),
+                      ), // 边框颜色
                     ), // 点击事件
                     child: Text(
                       widget.text,
